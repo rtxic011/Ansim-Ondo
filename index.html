@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>안심온도 (Ansim-Ondo) - 맞춤형 위험 예측</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>안심온도 (Ansim-Ondo)</h1>
+            <p>폭염/한파 취약계층 AI 건강 지킴이</p>
+        </header>
+
+        <!-- 1. 정보 패널 (사용자 + 환경/생체) -->
+        <section class="info-dashboard">
+            <!-- 사용자 프로필 -->
+            <div class="card profile-card">
+                <h3>👤 사용자 프로필</h3>
+                <div class="info-grid">
+                    <span>이름:</span> <strong id="u-name">-</strong>
+                    <span>나이:</span> <span id="u-age">-</span>세
+                    <span>기저질환:</span> <span id="u-disease">-</span>
+                    <span>주거환경:</span> <span id="u-house">-</span>
+                    <span>현재위치:</span> <strong id="u-location" class="location-badge">-</strong>
+                </div>
+            </div>
+
+            <!-- 실시간 센서 데이터 -->
+            <div class="card sensor-card">
+                <h3>📡 실시간 센싱 데이터</h3>
+                <div class="info-grid">
+                    <span>기온:</span> <strong><span id="w-temp">-</span>°C</strong>
+                    <span>체감온도:</span> <span id="w-feels">-</span>°C
+                    <span>습도:</span> <span id="w-humi">-</span>%
+                    <span>기상특보:</span> <span id="w-alert">-</span>
+                    <!-- 핵심 생체 변수 -->
+                    <span class="highlight-label">사용자 체온:</span> 
+                    <strong id="b-temp" class="body-temp-display">- °C</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. 핵심 기능: AI 위험 예측 결과 -->
+        <section id="risk-panel" class="risk-panel safe">
+            <h2>AI 위험도 분석 결과</h2>
+            <div class="risk-icon" id="risk-icon">😊</div>
+            <div class="risk-status" id="risk-level">분석 중...</div>
+        </section>
+
+        <!-- 3. 핵심 기능: 맞춤형 가이드 -->
+        <section class="guide-box">
+            <h3>📢 행동 가이드</h3>
+            <p id="advice-msg">데이터를 수신하고 있습니다...</p>
+        </section>
+
+        <!-- 4. 핵심 기능: 긴급 SOS -->
+        <section class="sos-area">
+            <button id="sos-btn" class="sos-button">
+                🚨 긴급 SOS 호출
+                <span class="small-text">(보호자/119 연계)</span>
+            </button>
+            <p id="sos-feedback" class="hidden">신호 전송 중...</p>
+        </section>
+
+        <!-- (시연용 컨트롤러: 채점관에게 보여주기 위한 강제 설정 버튼) -->
+        <section class="demo-controls">
+            <h4>🛠 시연용 상황 설정 (테스트 버튼)</h4>
+            <div class="btn-group">
+                <button onclick="setScenario('safe')">1. 안심 상황</button>
+                <button onclick="setScenario('caution')">2. 주의 상황</button>
+                <button onclick="setScenario('danger')">3. 위험 상황 (SOS)</button>
+                <button onclick="toggleAutoMode()">🔄 자동 시뮬레이션 (ON/OFF)</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
