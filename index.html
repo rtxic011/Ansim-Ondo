@@ -19,11 +19,20 @@
             <div class="card profile-card">
                 <h3>👤 사용자 프로필</h3>
                 <div class="info-grid">
-                    <span>이름:</span> <strong id="u-name">-</strong>
-                    <span>나이:</span> <span id="u-age">-</span>세
-                    <span>기저질환:</span> <span id="u-disease">-</span>
-                    <span>주거환경:</span> <span id="u-house">-</span>
-                    <span>현재위치:</span> <strong id="u-location" class="location-badge">-</strong>
+                    <span>이름:</span>
+                    <strong id="u-name">-</strong>
+
+                    <span>나이:</span>
+                    <span class="inline-value"><span id="u-age">-</span> 세</span>
+
+                    <span>기저질환:</span>
+                    <span id="u-disease">-</span>
+
+                    <span>주거환경:</span>
+                    <span id="u-house">-</span>
+
+                    <span>현재위치:</span>
+                    <strong id="u-location" class="location-badge">-</strong>
                 </div>
             </div>
 
@@ -31,13 +40,22 @@
             <div class="card sensor-card">
                 <h3>📡 실시간 센싱 데이터</h3>
                 <div class="info-grid">
-                    <span>기온:</span> <strong><span id="w-temp">-</span>°C</strong>
-                    <span>체감온도:</span> <span id="w-feels">-</span>°C
-                    <span>습도:</span> <span id="w-humi">-</span>%
-                    <span>기상특보:</span> <span id="w-alert">-</span>
-                    <!-- 핵심 생체 변수 -->
-                    <span class="highlight-label">사용자 체온:</span> 
-                    <strong id="b-temp" class="body-temp-display">- °C</strong>
+                    <span>기온:</span>
+                    <span class="inline-value"><strong id="w-temp">-</strong> °C</span>
+
+                    <span>체감온도:</span>
+                    <span class="inline-value"><span id="w-feels">-</span> °C</span>
+
+                    <span>습도:</span>
+                    <span class="inline-value"><span id="w-humi">-</span> %</span>
+
+                    <span>기상특보:</span>
+                    <span id="w-alert">-</span>
+
+                    <span class="highlight-label">사용자 체온:</span>
+                    <span class="inline-value">
+                        <strong id="b-temp" class="body-temp-display">-</strong> °C
+                    </span>
                 </div>
             </div>
         </section>
